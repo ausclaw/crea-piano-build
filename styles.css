@@ -5,12 +5,14 @@
   box-sizing: border-box;
 }
 
+/*Font for heading*/
 @font-face {
     font-family: doggyPapaw;
     src: url(DoggyPapawDemo-ZpyL8.otf);
   }
   
  
+/*Heading Style*/
 
 h1 {
 
@@ -23,6 +25,7 @@ h1 {
   font-family: doggyPapaw;
   font-kerning: auto
 }
+
 /* Style the body */
 body {
     /*Moving Background*/
@@ -36,17 +39,20 @@ body {
   align-items: center;
 }
 
+/*Background animation*/
+
 @keyframes animate-bg {
     100% {
         background-position: 626px 626px;
     }
 }
+
 /* Style the piano to use flex box */
 .piano {
   display: flex;
 }
 
-
+/* Piano Keys Styling*/
 .key {
     height: calc(var(--width) * 4);  
     width: var(--width);
@@ -69,6 +75,7 @@ body {
     border-radius: 15px;
   }
 
+  /*Style while pressed*/
   .white.active {
     background-color: #ff9239;
   }
