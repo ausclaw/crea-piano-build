@@ -1,0 +1,79 @@
+/* CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: doggyPapaw;
+    src: url(DoggyPapawDemo-ZpyL8.otf);
+  }
+  
+ 
+
+h1 {
+
+  color: #81381b;
+  margin: 0;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: doggyPapaw;
+  font-kerning: auto
+}
+/* Style the body */
+body {
+    /*Moving Background*/
+  background-color: #eea621;
+  background-image: url("pawprint.png");
+  animation: animate-bg 7s infinite linear;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes animate-bg {
+    100% {
+        background-position: 626px 626px;
+    }
+}
+/* Style the piano to use flex box */
+.piano {
+  display: flex;
+}
+
+
+.key {
+    height: calc(var(--width) * 4);  
+    width: var(--width);
+          
+  }
+  
+  .white {
+    --width: 100px;  
+    background-color: rgb(255, 228, 168);
+    border: 8px solid #aa6728;
+    border-radius: 25px;
+  }
+  
+  .black {
+    --width: 60px;   
+    background-color: #5a2c1a;
+    margin-left: calc(var(--width) / -2);   
+    margin-right: calc(var(--width) / -2);  
+    z-index: 2;
+    border-radius: 15px;
+  }
+
+  .white.active {
+    background-color: #ff9239;
+  }
+  
+  .black.active {
+    background-color: #411305;
+  }
+
